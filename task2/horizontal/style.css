@@ -4,10 +4,6 @@
     padding:0;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-table
-{
     border-spacing: 0;
 }
 
@@ -23,7 +19,7 @@ td:first-child
 
 td
 {
-    width:130px;
+    width:150px;
     height:50px;
     text-align: center;
 }
@@ -43,9 +39,35 @@ tr:nth-child(even)
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 
-tbody tr
+#table>table
 {
-    display: inline-block;
-    grid-auto-flow: column;
+    position:absolute;
+}
+
+#table>table tr
+{
+    display:grid;
+    grid-auto-flow: row;
+}
+
+#body>table tr
+{
+    display:inline-grid;
+    grid-auto-flow: row;
+}
+
+#table
+{
+    overflow: auto;
+}
+
+#body>table
+{
+	white-space: nowrap;
+}
+
+#body
+{
+    margin-left:150px;
 }
 
